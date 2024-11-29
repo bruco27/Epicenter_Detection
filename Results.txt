@@ -1,0 +1,123 @@
+TASK 1
+DISTANCE FROM EPICENTER
+
+--Standard
+BAD RESULTS
+
+
+TASK = DISTANCE 
+new 
+ResNet18
+1. train_opt with new distances, rounded about 100km
+(MAE): 16.1775,
+(MSE): 1756.4472, 
+RMSE: 41.9631 
+
+
+2. train normalization (coordinates and distances) range [0,1]
+MAE: 0.0627,
+MSE: 0.0160,
+RMSE: 0.1263
+
+3. train coordinates and distances rounded about 100km
+MAE: 7.7456, 
+MSE: 824.4542
+RMSE: 28.7063, 
+R^2: 0.5570
+
+
+ResNet50
+1. train_opt with new distances, rounded about 100km
+(MAE): 13.6538,
+(MSE): 1860.0637, 
+RMSE: 43.1951 
+
+
+2. train normalization (coordinates and distances) range [0,1]
+MAE: 0.0339,
+MSE: 0.0111,
+RMSE: 0.1052
+
+3. train coordinates and distances rounded about 100km
+MAE: 10.3901,
+MSE: 1211.0259
+RMSE: 34.8051,  
+R^2: 0.3488
+
+
+ConvNext
+1. train_opt with new distances, rounded about 100km
+(MAE): 17.1714,
+(MSE): 1854.4116, 
+RMSE: 43.1309 
+
+
+2. train normalization (coordinates and distances) range [0,1]
+MAE: 0.0333, 
+MSE: 0.0108, 
+RMSE: 0.1037
+
+3. train coordinates and distances rounded about 100km
+WAIT TRAINING
+
+
+ViT
+1. train_opt with new distances, rounded about 100km
+(MAE): 17.1115,
+(MSE): 1854.4229, 
+RMSE: 43.1311 
+
+
+2. train normalization (coordinates and distances) range [0,1]
+MAE: 0.0338, 
+MSE: 0.0089, 
+RMSE: 0.0942, 
+
+3. train coordinates and distances rounded about 100km - only MSE loss
+MAE: 6.2251, 
+MSE: 990.5480, 
+RMSE: 31.4730, 
+R2: 0.4675
+
+
+
+
+
+
+
+TASK2
+POINT of EPICENTER
+with normalization of coordinates
+
+
+ResNet18
+-
+MAE: 55.5475, 
+MSE: 6524.7121, 
+RMSE: 80.7757
+
+
+
+ResNet50
+-
+MAE: 56.4612, 
+MSE: 6200.3866, 
+RMSE: 78.7425
+
+
+
+ConvNext
+-
+MAE: 28.1063, 
+MSE: 3718.7980, 
+RMSE: 60.9819
+R2: 0.3701
+
+
+ViT - BEST model
+-
+MAE: 16.5482, 
+MSE: 997.5620, 
+RMSE: 31.5842
+R2: 0.6482
+
